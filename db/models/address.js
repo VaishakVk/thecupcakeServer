@@ -10,7 +10,7 @@ const addressSchema = new mongoose.Schema(
 			type: Number,
 			required: true,
 		},
-		address_line1: {
+		address_line: {
 			type: String,
 			required: true,
 		},

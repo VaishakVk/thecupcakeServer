@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 
 const customerRoutes = require("./routes/customer");
 const categoryAdminRoutes = require("./routes/category");
-const productAdminRoutes = require("./routes/product");
+const productRoutes = require("./routes/product");
 
 const isAdmin = require("./middleware/isAdmin");
 const isAuthenticated = require("./middleware/isAuthenticated");
@@ -36,13 +36,8 @@ app.use(bodyParser.json({ limit: "10mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 
 app.use("/api/v1/customer", customerRoutes);
-app.use(
-	"/api/v1/admin/category",
-	isAuthenticated,
-	isAdmin,
-	categoryAdminRoutes
-);
-app.use("/api/v1/admin/product", isAuthenticated, isAdmin, productAdminRoutes);
+app.use("/api/v1/category", categoryAdminRoutes);
+app.use("/api/v1/product", productRoutes);
 
 app.use("/status", (req, res) => {
 	return res.status(200).send({ status: true, message: "Server is up!" });

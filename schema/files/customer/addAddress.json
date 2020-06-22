@@ -1,0 +1,40 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "http://example.com/addAddress.json",
+	"type": "object",
+	"title": "addAddress schema",
+	"description": "addAddress schema",
+	"additionalProperties": false,
+	"required": [
+		"customerId",
+		"address_line",
+		"lat",
+		"lng",
+		"door",
+		"postal_code",
+		"city"
+	],
+	"properties": {
+		"customerId": {
+			"type": "string"
+		},
+		"lat": {
+			"type": "number"
+		},
+		"lng": {
+			"type": "number"
+		},
+		"address_line": {
+			"type": "string"
+		},
+		"door": {
+			"type": "string"
+		},
+		"postal_code": {
+			"type": "string"
+		},
+		"city": {
+			"type": "string"
+		}
+	}
+}
