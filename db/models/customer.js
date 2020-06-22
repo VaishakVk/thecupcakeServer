@@ -10,6 +10,22 @@ const customerObj = {
 			},
 		],
 	},
+	cart: {
+		type: [
+			{
+				product_id: {
+					type: mongoose.Schema.Types.ObjectId,
+					ref: "Product",
+					required: true,
+				},
+				quantity: {
+					type: Number,
+					required: true,
+				},
+			},
+		],
+		default: [],
+	},
 	...userSchema,
 };
 const customerSchema = new mongoose.Schema(customerObj, { timestamps: true });

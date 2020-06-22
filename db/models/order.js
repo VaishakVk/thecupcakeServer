@@ -19,15 +19,6 @@ const orderSchema = new mongoose.Schema(
 					type: Number,
 					required: true,
 				},
-				uom: {
-					type: String,
-					enum: [
-						constants.uom.kg,
-						constants.uom.litre,
-						constants.uom.units,
-					],
-					required: true,
-				},
 				price: {
 					type: Number,
 					required: true,
