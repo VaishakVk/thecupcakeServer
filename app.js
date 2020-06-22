@@ -7,11 +7,12 @@ const bodyParser = require("body-parser");
 const customerRoutes = require("./routes/customer");
 const categoryAdminRoutes = require("./routes/category");
 const productRoutes = require("./routes/product");
+const orderRoutes = require("./routes/order");
 
 const isAdmin = require("./middleware/isAdmin");
 const isAuthenticated = require("./middleware/isAuthenticated");
 
-app.use(morgan(":method :url :date[iso] :response-time ms"));
+app.use(morgan(":method :url :status :date[iso] :response-time ms"));
 
 app.use((req, res, next) => {
 	res.header("Access-Control-Allow-Origin", req.get("Origin") || "*");
@@ -38,6 +39,7 @@ app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 app.use("/api/v1/customer", customerRoutes);
 app.use("/api/v1/category", categoryAdminRoutes);
 app.use("/api/v1/product", productRoutes);
+app.use("/api/v1/order", orderRoutes);
 
 app.use("/status", (req, res) => {
 	return res.status(200).send({ status: true, message: "Server is up!" });

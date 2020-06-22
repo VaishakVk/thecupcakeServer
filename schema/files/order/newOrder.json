@@ -1,0 +1,35 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "http://example.com/newOrder.json",
+	"type": "object",
+	"title": "newOrder schema",
+	"description": "newOrder schema",
+	"additionalProperties": false,
+	"required": ["customer_id", "address", "delivery_time", "products"],
+	"properties": {
+		"customer_id": {
+			"type": "string"
+		},
+		"address": {
+			"type": "string"
+		},
+		"delivery_time": {
+			"type": "string"
+		},
+		"products": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": ["product_id", "quantity"],
+				"properties": {
+					"product_id": {
+						"type": "string"
+					},
+					"quantity": {
+						"type": "number"
+					}
+				}
+			}
+		}
+	}
+}

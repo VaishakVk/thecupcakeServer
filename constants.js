@@ -30,5 +30,14 @@ module.exports = {
 		dispatched: "DIPSATCHED",
 		delivered: "DELIVERED",
 		payment_failed: "PAYMENT_FAILED",
+		order: function () {
+			return [
+				this.initiated,
+				this.received,
+				this.preparing,
+				this.dispatched,
+				this.delivered,
+			];
+		},
 	},
 };
