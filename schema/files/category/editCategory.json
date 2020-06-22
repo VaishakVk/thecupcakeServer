@@ -1,0 +1,23 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "http://example.com/editCategory.json",
+	"type": "object",
+	"title": "Edit Category schema",
+	"description": "Edit Category schema",
+	"additionalProperties": false,
+	"required": ["id"],
+	"properties": {
+		"display_name": {
+			"type": "string"
+		},
+		"name": {
+			"type": "string"
+		},
+		"id": {
+			"type": "string"
+		},
+		"active": {
+			"type": "boolean"
+		}
+	}
+}

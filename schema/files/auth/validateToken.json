@@ -1,0 +1,16 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "http://example.com/validateToken.json",
+	"type": "object",
+	"title": "Valdiate Token",
+	"description": "Validate token for patient and provider.",
+	"additionalProperties": false,
+	"required": ["token"],
+	"properties": {
+		"token": {
+			"$id": "#/properties/token",
+			"type": "string",
+			"title": "The Token Schema"
+		}
+	}
+}

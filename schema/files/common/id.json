@@ -1,0 +1,16 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "http://example.com/getId.json",
+	"type": "object",
+	"title": "Get Ids",
+	"description": "Change Status of Booking service.",
+	"additionalProperties": false,
+	"required": ["id"],
+	"properties": {
+		"id": {
+			"$id": "#/properties/id",
+			"type": "string",
+			"title": "The Id Schema"
+		}
+	}
+}

@@ -1,0 +1,52 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "http://example.com/addProduct.json",
+	"type": "object",
+	"title": "Add Product schema",
+	"description": "Add Product schema",
+	"additionalProperties": false,
+	"required": [
+		"display_name",
+		"name",
+		"unit_of_measure",
+		"price_per_uom",
+		"uom_quantities",
+		"time_required_mins"
+	],
+	"properties": {
+		"display_name": {
+			"type": "string"
+		},
+		"name": {
+			"type": "string"
+		},
+		"purchaseable": {
+			"type": "boolean"
+		},
+		"unit_of_measure": {
+			"type": "string",
+			"enum": ["KG", "UNITS", "LITRE"]
+		},
+		"price_per_uom": {
+			"type": "number"
+		},
+		"uom_quantities": {
+			"type": "array",
+			"items": {
+				"type": "number"
+			}
+		},
+		"offer": {
+			"type": "string"
+		},
+		"time_required_mins": {
+			"type": "number"
+		},
+		"categories": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		}
+	}
+}

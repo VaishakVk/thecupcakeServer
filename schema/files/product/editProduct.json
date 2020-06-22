@@ -1,0 +1,48 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "http://example.com/editProduct.json",
+	"type": "object",
+	"title": "Edit Product schema",
+	"description": "Edit Product schema",
+	"additionalProperties": false,
+	"required": ["id"],
+	"properties": {
+		"id": {
+			"type": "string"
+		},
+		"display_name": {
+			"type": "string"
+		},
+		"name": {
+			"type": "string"
+		},
+		"purchaseable": {
+			"type": "boolean"
+		},
+		"unit_of_measure": {
+			"type": "string",
+			"enum": ["KG", "UNITS", "LITRE"]
+		},
+		"price_per_uom": {
+			"type": "number"
+		},
+		"uom_quantities": {
+			"type": "array",
+			"items": {
+				"type": "number"
+			}
+		},
+		"offer": {
+			"type": "string"
+		},
+		"time_required_mins": {
+			"type": "number"
+		},
+		"categories": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		}
+	}
+}

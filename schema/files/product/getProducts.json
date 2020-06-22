@@ -1,0 +1,13 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "http://example.com/getProducts.json",
+	"type": "object",
+	"title": "Get Products schema",
+	"description": "Get Products schema",
+	"additionalProperties": false,
+	"properties": {
+		"active": {
+			"type": "boolean"
+		}
+	}
+}

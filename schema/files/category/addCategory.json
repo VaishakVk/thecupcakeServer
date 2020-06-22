@@ -1,0 +1,17 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "http://example.com/addCategory.json",
+	"type": "object",
+	"title": "Add Category schema",
+	"description": "Add Category schema",
+	"additionalProperties": false,
+	"required": ["display_name", "name"],
+	"properties": {
+		"display_name": {
+			"type": "string"
+		},
+		"name": {
+			"type": "string"
+		}
+	}
+}
